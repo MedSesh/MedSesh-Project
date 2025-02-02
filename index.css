@@ -2,17 +2,18 @@ body{
 background-color: gray;
 }
 .sidenav {
-  height: 100%;
+  height: 100vh;
   width: 250px;
   position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  top: 50px; /* Leaves space for menu icon */
+  left: -250px; /* Initially hidden */
   background-color: #111;
   padding-top: 20px;
-  overflow-x: hidden;
+  transition: left 0.3s ease;
 }
-
+.sidenav.open {
+  left: 0; /* Show sidebar */
+}
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -53,3 +54,20 @@ background-color: gray;
   width: 70%;
   border-bottom: 1px solid #f1f1f1;
 } 
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 10px; /* Keeps it at the top */
+    left: 10px;
+    z-index: 2;
+  }
+  
+ 
